@@ -14,6 +14,7 @@ public class Open {
 
         WebDriverManager.chromiumdriver().setup();
         WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
 
         driver.get("https://www.youtube.com/watch?v=dlFs2y4c3Mo");
 
