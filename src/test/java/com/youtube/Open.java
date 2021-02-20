@@ -20,10 +20,6 @@ public class Open {
 
          WebElement a =driver.findElement(By.xpath("//*[@id=\"introAgreeButton\"]/span/span"));
          a.click();
-         //driver.findElement(By.id("//*[@id=\"introAgreeButton\"]/span/span")).click();
-        //*[@id="introAgreeButton"]/span/span
-        //*[@id="text"]
-        //*[@id="introAgreeButton"]/span/span
-        //*[@id="introAgreeButton"]/span/span
+
     }
 }
