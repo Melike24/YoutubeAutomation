@@ -15,7 +15,7 @@ public class Open {
         WebDriverManager.chromiumdriver().setup();
         WebDriver driver = new ChromeDriver();
 
-        driver.get("https://www.youtube.com/watch?v=yJPicr0JwSY");
+        driver.get("https://www.youtube.com/watch?v=dlFs2y4c3Mo");
 
         BrowserUtils.waitFor(3);
          driver.findElement(By.xpath("/html/body/ytd-app/ytd-popup-container/paper-dialog/yt-upsell-dialog-renderer/div/div[3]/div[1]/yt-button-renderer/a/paper-button")).click();
