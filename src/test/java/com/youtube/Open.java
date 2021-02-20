@@ -1,5 +1,6 @@
 package com.youtube;
 
+import com.youtube.utilities.BrowserUtils;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -14,12 +15,15 @@ public class Open {
         WebDriverManager.chromiumdriver().setup();
         WebDriver driver = new ChromeDriver();
 
-        driver.get("https://www.youtube.com/");
+        driver.get("https://www.youtube.com/watch?v=yJPicr0JwSY");
 
-        Thread.sleep(3000);
+        BrowserUtils.waitFor(3);
+         driver.findElement(By.xpath("/html/body/ytd-app/ytd-popup-container/paper-dialog/yt-upsell-dialog-renderer/div/div[3]/div[1]/yt-button-renderer/a/paper-button")).click();
+        BrowserUtils.waitFor(3);
+        driver.switchTo().frame("iframe");
+        BrowserUtils.waitFor(3);
+        driver.findElement(By.xpath("/html/body/div/c-wiz/div[2]/div/div/div/div/div[2]/form/div/span/span")).click();
 
-         WebElement a =driver.findElement(By.xpath("//*[@id=\"introAgreeButton\"]/span/span"));
-         a.click();
 
     }
 }
