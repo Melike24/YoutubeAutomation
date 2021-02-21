@@ -16,14 +16,20 @@ public class Open {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
 
-        driver.get("https://www.youtube.com/watch?v=dlFs2y4c3Mo");
+        driver.get("https://www.youtube.com");
 
         BrowserUtils.waitFor(3);
-         driver.findElement(By.xpath("/html/body/ytd-app/ytd-popup-container/paper-dialog/yt-upsell-dialog-renderer/div/div[3]/div[1]/yt-button-renderer/a/paper-button")).click();
+         driver.findElement(By.xpath("//*[@class='style-scope yt-button-renderer style-text size-small']")).click();
         BrowserUtils.waitFor(3);
         driver.switchTo().frame("iframe");
         BrowserUtils.waitFor(3);
-        driver.findElement(By.xpath("/html/body/div/c-wiz/div[2]/div/div/div/div/div[2]/form/div/span/span")).click();
+        driver.findElement(By.xpath("//*[@id=\"introAgreeButton\"]/span/span")).click();
+
+     //driver.findElement(By.xpath("//*[@id=\"search-input\"]")).click();
+
+       // String music = "Marshmello";
+
+        //search.sendKeys(music);
 
 
     }
